@@ -3,6 +3,11 @@ body {
     margin: 0;
     padding: 0;
     top: 0;
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    color: #222;
+    font-weight: lighter;
+    overflow: hidden;
 }
 
 header {
@@ -45,39 +50,121 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-wrap: wrap;
 }
 
 #logo {
     height: 92px;
 }
 
-#logo-div {
-
-}
-
-#search {
+#search-box {
     width: 90vw;
     max-width: 600px;
     border: 1px solid #c8cacc;
     border-radius: 50px;
     margin: 30px;
     height: 30px;
+    position: relative;
+}
+#search-box input {
+    border:none;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 #glass {
-    height: 15px;
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    height: 20px;
 }
 
 #mic {
-    height: 15px;
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    height: 30px;
 }
 
 #buttons {
+    width: 50vh;
+    max-width: 500px;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    margin: auto;
+}
 
+#buttons button {
+    border: none;
+    font-size: 16px;
+    font-weight: 100;
+}
+
+#covid-message {
+    text-align: center;
+    width: 90vw;
+}
+
+#covid-message a {
+    color: blue;
 }
 
 footer {
     color: #70757a;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 70%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
 }
+
+#foot-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    order: 2;
+}
+
+#foot-right {
+    justify-content: flex-end;
+    min-width: 30%;
+    order: 3;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#foot-left {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    min-width: 30%;
+    order: 1;
+}
+
+footer a {
+    display: inline-block;
+    padding: 5px;
+    margin: 0 5px;
+}
+
+#leaf {
+    height: 15px;
+}
+
+@media only screen and (max-width: 1200px) {
+footer {
+    justify-content: space-evenly;
+}
+#foot-center {
+    order: 0;
+    width: 100%;
+    justify-content: center;
+}
+#foot-left {
+
+}
+}
+
